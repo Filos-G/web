@@ -1,4 +1,4 @@
-div {
+body {
   background-color: lightblue;
   animation-name: example;
   animation-duration: 4s;
@@ -7,4 +7,4 @@ div {
 @keyframes example {
   from {background-color: blue;}
   to {background-color: red;}
-}/* CSS Document */
+}
