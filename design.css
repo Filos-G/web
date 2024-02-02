@@ -6,6 +6,6 @@ body {
 }
 
 @keyframes example {
-  from {background-color: LightBlue;}
+  from {background-color: lightblue;}
   to {background-color: DodgerBlue;}
 }
