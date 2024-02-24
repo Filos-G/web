@@ -26,6 +26,64 @@ Vítejte na mé domovské stránce!
 <ul>
   <li> <a class="nav-item nav-link" href="https://filos-g.github.io/web/Diracovo moře.pdf" target="_blank">Diracovo moře</a></li>
 </ul>
-	  
+	 <canvas id="myCanvas" width="1000" height="400" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");        
+         
+          function basicFunction(mass) {
+          if (mass > 0) {
+            var R = 2.954*mass;
+            ctx.beginPath();
+            ctx.moveTo(500+R*100, 400);
+            for (x = 0; x <= 1000; x = x + 0.1) {
+                var h = 200 - 5*(Math.sqrt(R*(x-R*100-500))-Math.sqrt(R*(500-R*100)));
+                if (h <= 400) {
+                    ctx.lineTo(x, h);
+                    ctx.stroke();
+                
+                }
+            }
+         
+            ctx.beginPath();
+            ctx.moveTo(0, 200);
+            for (x = 0; x <= 1000; x = x + 0.5) {
+                var h = 200 - 5*(Math.sqrt(R*(-x-R*100+500))-Math.sqrt(R*(500-R*100)));
+                if (h <= 400) {
+                    ctx.lineTo(x, h);
+                    ctx.stroke();
+                
+                }
+            }
+          for (x = 200 + 5*Math.sqrt(R*(500-100*R)); x <= 400; x = x + 0.5) {
+           ctx.beginPath();
+           ctx.moveTo(500-100*R, 400);
+           ctx.lineTo(500-100*R, x);
+           ctx.stroke();
+          }
+        } else {
+        for (x = 0; x <= 1000; x = x + 0.5) {
+           ctx.beginPath();
+           ctx.moveTo(0, 200);
+           ctx.lineTo(x, 200);
+           ctx.stroke();
+          }
+        }
+        }
+
+        function Function() {
+            ctx.clearRect(0, 100, c.width, c.height);
+        }
+    </script>
+
+<h2>šířka: 10 km</h2>
+
+
+    <label for="quantity"> Zadejte hmotnost tělesa (v hmotnostech Slunce):</label>
+    <input type="number" id="mass" name="mass" min="0">
+    <button type="button" onclick="basicFunction(document.getElementById('mass').value);">Počítej!</button>
+    <button onclick="Function()">RESET</button>  
   </body>
 </html>
