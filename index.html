@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cs">                                                                             
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Filos G." />
+	<meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title> Michal Stroff homepage </title>
+    <link rel="stylesheet" href="./design.css" type="text/css" media="screen" />
+</head> 
+  <body>
+<a class="title" href="./index.html"><h1>Michal Stroff</h1></a>
+<ul>
+<li> <a class="nav-item nav-link" href="./ideas.html">Myšlenky</a>  </li>
+<li> <a class="nav-item nav-link" href="./poems.html">Básně a říkanky</a></li>
+<li> <a class="nav-item nav-link" href="./lectures.html">Přednášky</a></li>
+<li> <a class="nav-item nav-link" href="./fyzika.html">Fyzika</a></li>
+<li> <a class="nav-item nav-link" href="./feminismus.html">Feminismus</a></li>
+<li> <a class="nav-item nav-link" href="./sport.html">Sport</a></li>
+</ul>
+<a class = "me">
+ <img class="me" src="me.jpg" alt="Michal Stroff" width="240" height="300">
+ <p>
+ <strong>Narozen:</strong> 5. 11. 2006
+  </p>
+  <p>
+ <strong>Škola:</strong> GyBu
+ </p>
+ <p>
+ <strong>Kontakt:</strong>
+ </p>
+ <p class="mail">
+ <i class="fa fa-envelope"> michal.stroff@gmail.com</i>
+ </p>
+ <p class="mail">
+ <i class="fa fa-instagram"> differento_feynman</i>
+ </p>
+ <p class="mail">
+ <i class="fa fa-phone"> +420 727 866 070</i>
+ </p>
+ </a>
+ <div class = "text">
+   
+ Zdravím, jsem 17letý student Gymnázia Budějovická se zájmem o fyziku. Hádám, že jsi nadmíru zvědavx, když ses dostalx až sem.
+ Je-li tomu tak, pak tě, čtenářstvo, vřele vítám na své domovské stránce! Zvědavost totiž dle mého není ze své ryzí podstaty hřích. Záleží jen na tom, s jakou etikou s ní dále nakládáme.
+ Nicméně věz, že v&nbsp;tomto prostoru jsi plně svobodnx ve svém poznávání, takže zjišťuj, cokoliv ti přijde na chuť. Doufám, že aspoň částečně tvou hlodavou touhu po vědění dokáži touto stránkou uspokojit.
+ Přikládám proto mnoho odkazů na mé (již proběhlé) přednášky, chceš-li se vzdělat ve fyzice, nezapomněl jsem přidat také pár úvahových textů a&nbsp;básniček a pro případ, že mě chceš pouze stalkovat,
+ jsem zajistil, že se ti pár perliček z mého života taktéž podaří ukořistit. Užívej si, nasávej informace s radostí a nezapoměň...
+ 
+ <p class="quote"><i><s>Nebuď zvědavý, budeš brzy starý!</s></i></p>
+ <p class="quote"><i>Buď zvědavx, budeš brzy moudrx!</i></p>
+
+<a class="nav-item nav-link" href="./fyzika.html"><img class="ph" src="fyzika.jpg" alt="Fyzika" width="200" height="200"></a>
+<a class="nav-item nav-link" href="./feminismus.html"><img class="fe" src="feminismus.jpg" alt="Feminismus" width="200" height="200"></a>
+<a class="nav-item nav-link" href="./sport.html"><img class="ka" src="karate.jpg" alt="Sport" width="200" height="200"></a>
+</div>
+
+ 
+
+<!--  <h3>Diagram vnoření černé díry</h3>
+	 <canvas id="myCanvas" width="1000" height="400" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");        
+         
+          function basicFunction(mass) {
+          if (mass > 0) {
+            var R = 2.954*mass;
+            ctx.beginPath();
+            ctx.moveTo(500+R*100, 400);
+            for (x = 0; x <= 1000; x = x + 0.1) {
+                var h = 200 - 5*(Math.sqrt(R*(x-R*100-500))-Math.sqrt(R*(500-R*100)));
+                if (h <= 400) {
+                    ctx.lineTo(x, h);
+                    ctx.stroke();
+                
+                }
+            }
+         
+            ctx.beginPath();
+            ctx.moveTo(0, 200);
+            for (x = 0; x <= 1000; x = x + 0.5) {
+                var h = 200 - 5*(Math.sqrt(R*(-x-R*100+500))-Math.sqrt(R*(500-R*100)));
+                if (h <= 400) {
+                    ctx.lineTo(x, h);
+                    ctx.stroke();
+                
+                }
+            }
+          for (x = 200 + 5*Math.sqrt(R*(500-100*R)); x <= 400; x = x + 0.5) {
+           ctx.beginPath();
+           ctx.moveTo(500-100*R, 400);
+           ctx.lineTo(500-100*R, x);
+           ctx.stroke();
+          }
+        } else {
+        for (x = 0; x <= 1000; x = x + 0.5) {
+           ctx.beginPath();
+           ctx.moveTo(0, 200);
+           ctx.lineTo(x, 200);
+           ctx.stroke();
+          }
+        }
+        }
+
+        function Function() {
+            ctx.clearRect(0, 100, c.width, c.height);
+        }
+    </script>
+
+<h3>šířka: 10 km</h3>
+
+
+    <label for="quantity"> Zadejte hmotnost tělesa (v hmotnostech Slunce):</label>
+    <input type="number" id="mass" name="mass" min="0">
+    <button type="button" onclick="basicFunction(document.getElementById('mass').value);">Počítej!</button>
+    <button onclick="Function()">RESET</button>  
+  -->
+  </body>
+</html>
