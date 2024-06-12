@@ -21,9 +21,6 @@ h1:hover {
 background-image: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
 }
 
-ul {float:left; width:180px; font-size:18px; letter-spacing:1px; list-style-type: none;}
-
-
 li a {text-decoration:none; color: #000;
           border:3px ridge #aaa;
           background-color: #bfffbf;
@@ -33,14 +30,9 @@ li a:hover {color:#000;
             background-color:#fff; 
             border-color: #f00;}
 
-div.text {margin-left:300px;
-margin-right: 360px; font-size: 19px; text-align:justify;}
-
 p {margin-left: -25px; margin-top: 2px; margin-bottom: 2px; text-indent:2em; font-size: 20px;}
 p.mail {font-size: 18px; margin-left:-45px;}
 img.me {border: 10px ridge #777;}
-
-a.me {float:right; margin-right: 40px; border: 2px solid #000; background: #bfffbf;}
 
 dl {margin-left:100px;}
 
@@ -56,3 +48,20 @@ img.ph:hover {transform: scale(1.1);}
 img.fe:hover {transform: scale(1.1);}
 img.ka:hover {transform: scale(1.1);}
 
+@media screen and (max-width: 1000px){
+ul {width:180px; font-size:18px; letter-spacing:1px; list-style-type: none;}
+
+a.me {margin-right: 40px; border: 2px solid #000; background: #bfffbf;}
+
+div.text {font-size: 19px; text-align:justify;}
+}
+
+@media screen and (min-width: 1001px){
+
+a.me {float:right; margin-right: 40px; border: 2px solid #000; background: #bfffbf;}
+
+ul {float:left; width:180px; font-size:18px; letter-spacing:1px; list-style-type: none;}
+
+div.text {margin-left:300px;
+margin-right: 360px; font-size: 19px; text-align:justify;}
+}
