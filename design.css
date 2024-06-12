@@ -51,7 +51,7 @@ img.ka:hover {transform: scale(1.1);}
 @media screen and (max-width: 1000px){
 ul {width:180px; font-size:18px; letter-spacing:1px; list-style-type: none;}
 
-a.me {margin-right: 40px; border: 2px solid #000; background: #bfffbf;}
+a.me {margin-right: 40px;}
 
 div.text {font-size: 19px; text-align:justify;}
 }
