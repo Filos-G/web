@@ -69,4 +69,35 @@ ul {float:left; width:180px; font-size:18px; letter-spacing:1px; list-style-type
 
 div.text {margin-left:300px;
 margin-right: 360px; font-size: 19px; text-align:justify;}
+
+.code-container {
+    position: relative;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+}
+
+.code-container pre {
+    margin: 0;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: white;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,.15);
+    transition: .2s;
+}
+
+.copy-btn:hover {
+    background: #eee;
+}
 }
