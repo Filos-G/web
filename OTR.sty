@@ -1,0 +1,51 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{OTR}[2011/09/11 FYKOS comfort macros]
+
+
+\RequirePackage{amssymb}
+\RequirePackage{slashed}
+\RequirePackage{esint}
+\let\underscore\_
+
+%indexy (řecká písmena):
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\de}{\delta}
+\newcommand{\ep}{\epsilon}
+\newcommand{\la}{\lambda}
+\newcommand{\ka}{\kappa}
+\newcommand{\rh}{\oldrho}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\ph}{\oldphi}
+\newcommand{\ps}{\psi}
+\newcommand{\om}{\omega}
+\newcommand{\io}{\iota}
+\newcommand{\et}{\eta}
+\newcommand{\te}{\oldtheta}
+
+%koeficienty afinní konexe:
+\newcommand{\ac}[2]{\Gamma^{#1}_{#2}}
+
+%důležité tenzory s rychlým indexováním:
+\newcommand{\g}[2]{g_{#1#2}}
+\newcommand{\R}[2]{R_{#1#2}}
+\newcommand{\T}[2]{T_{#1#2}}
+\newcommand{\G}[2]{G_{#1#2}}
+\newcommand{\ud}[2]{^{#1}_{\phantom{#1}#2}}
+\newcommand{\du}[2]{_{#1}^{\phantom{#1}#2}}
+\newcommand{\uu}[2]{^{#1#2}}
+\newcommand{\dd}[2]{_{#1#2}}
+
+%známé rovnice:
+\newcommand{\Einstein}{\R\mu\nu-\frac{1}{2}R\g\mu \nu+\Lambda \g\mu\nu = \frac{8\pi G}{c^4}\T\mu\nu}
+\newcommand{\Einsteinn}{\G\mu\nu = 8\pi\T\mu\nu}
+
+%derivace:
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\p}[1]{_{,#1}}
+
+%Jacobiho matice:
+\newcommand{\jac}[2]{\frac{\partial \tilde x^#1}{\partial x^#2}}
+\newcommand{\jaci}[2]{\frac{\partial x^#1}{\partial \tilde x^#2}}
