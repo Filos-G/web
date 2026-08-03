@@ -44,9 +44,9 @@ iframe {margin-top:30px; margin-left:100px;}
 
 p.quote {text-align: center; font-size: 19px; margin-top: 10px;}
 
-img.ph {margin-top:30px;transition: transform .2s; align-items: center;}
-img.fe {margin-top:30px;transition: transform .2s; align-items: center;}
-img.ka {margin-left:20px; margin-top:30; transition: transform .2s; align-items: center;}
+img.ph {margin-top:30px;transition: transform .2s; align-items: bottom;}
+img.fe {margin-top:0px;transition: transform .2s; align-items: center;}
+img.ka {margin-left:20px; margin-top:0; transition: transform .2s; align-items: center;}
 
 img.ph:hover {transform: scale(1.1);}
 img.fe:hover {transform: scale(1.1);}
@@ -78,7 +78,9 @@ margin-right: 360px; font-size: 19px; text-align:justify;}
     padding: 20px;
     overflow-x: auto;
     font-family: Consolas, monospace;
-    width: 180px;
+    width: 400px;
+    height: 300px;
+    float: right;
 }
 
 .code-container pre {
