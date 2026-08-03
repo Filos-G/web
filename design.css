@@ -44,7 +44,7 @@ iframe {margin-top:30px; margin-left:100px;}
 
 p.quote {text-align: center; font-size: 19px; margin-top: 10px;}
 
-img.ph {margin:0px;transition: transform .2s; align-items: center;}
+img.ph {margin-top:30px;transition: transform .2s; align-items: center;}
 img.fe {margin:0px;transition: transform .2s; align-items: center;}
 img.ka {margin:20px;transition: transform .2s; align-items: center;}
 
