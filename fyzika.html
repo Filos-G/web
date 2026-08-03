@@ -26,6 +26,18 @@ class Dog:
     sound = "bark"
 </code></pre>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+const button = document.querySelector(".copy-btn");
+const code = document.querySelector("#code");
+
+button.addEventListener("click", async () => {
+    await navigator.clipboard.writeText(code.innerText);
+
+    button.textContent = "✅";
+    setTimeout(() => {
+        button.textContent = "📋";
+    }, 1500);
+});
+</script>
   </body>
 </html>
