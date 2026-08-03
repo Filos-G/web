@@ -17,7 +17,7 @@
 <h2>Kódy a makra</h2>
 
 <dl>
-  <dt> <a class="nav-item nav-link" href="./kretschmann" target="_blank"><i class="fab fa-pyhton"></i></a> výpočet Kretschmannova invariantu</dt>
+  <dt> <a class="nav-item nav-link" href="./kretschmann" download><i class="fab fa-python"></i></a> výpočet Kretschmannova invariantu</dt>
  </dl>
 	  
 <div class="code-container">
@@ -26,8 +26,40 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 
 <pre><code class="language-python">
-class Dog:
-    sound = "bark"
+import sympy
+from sympy import simplify, Function, symbols, latex
+from einsteinpy.symbolic import MetricTensor, RiemannCurvatureTensor
+
+t, r, theta, phi = symbols("t r theta phi")
+syms = [t, r, theta, phi]
+M = symbols("M")
+A = Function("A")(t)
+b = symbols("b")
+R = symbols("R")
+
+metric = [[0 for i in range(4)] for i in range(4)]
+metric[0][0] = -1
+metric[1][1] = A**2/(1+(b**2-2*M/R)*r**2/R**2)
+metric[2][2] = A**2*r**2
+metric[3][3] = A**2*r**2*sympy.sin(theta)**2
+
+m_obj = MetricTensor(metric, syms)
+rm = RiemannCurvatureTensor.from_metric(m_obj)
+riemann_cov = rm.tensor()
+riemann_cont = rm.change_config("luuu")
+
+Kr = sum(riemann_cov[a,b,c,d] * riemann_cont[a,b,c,d] 
+        for a in range(4) 
+        for b in range(4)
+        for c in range(4)
+        for d in range(4))
+Kretschmann = simplify(Kr)
+print()
+with open("kretschmann.tex", "w") as f:
+    f.write("\documentclass{article}\n")
+    f.write("\\begin{document}\n")
+    f.write("$$"+ latex(Kretschmann) +"$$\n")
+    f.write("\end{document}")
 </code></pre>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
