@@ -44,7 +44,7 @@ p.quote {text-align: center; font-size: 19px; margin-top: 10px;}
 
 img.ph {margin:0px;transition: transform .2s; align-items: center;}
 img.fe {margin:0px;transition: transform .2s; align-items: center;}
-img.ka {margin:0px;transition: transform .2s; align-items: center;}
+img.ka {margin:20px;transition: transform .2s; align-items: center;}
 
 img.ph:hover {transform: scale(1.1);}
 img.fe:hover {transform: scale(1.1);}
